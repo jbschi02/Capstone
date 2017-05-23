@@ -1,0 +1,32 @@
+﻿.Initial
+{
+  display: block;
+  padding: 4px 18px 4px 18px;
+  float: left;
+  color: Black;
+  font-weight: bold;
+  border: none
+}
+.Clicked {
+    float: left;
+    display: block;
+    padding: 4px 18px 4px 18px;
+    color: Black;
+    font-weight: bold;
+    color: White;
+    border: solid
+}
+
+.centerLogin{
+    position: absolute;
+    left: 39%;
+    top: 25%;
+}
+
+.center {
+    text-align: center;
+}
+
+.missingInfo {
+    color: red;
+}
