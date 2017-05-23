@@ -32,6 +32,7 @@ namespace ServiceTracker
             TabView.ActiveViewIndex = 1;
         }
 
+        //login stuff
         protected void DoLoginStuff(object sender, EventArgs e)
         {
             string MID = MIDText.Text;
