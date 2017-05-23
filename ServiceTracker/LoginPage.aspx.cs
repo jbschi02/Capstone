@@ -106,7 +106,7 @@ namespace ServiceTracker
 
         private void createNewManager(string mID, string password)
         {
-
+            //send to database
         }
     }
 }
