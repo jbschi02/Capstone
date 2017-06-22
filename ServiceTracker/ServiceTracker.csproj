@@ -111,6 +111,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AddEmployees.aspx" />
+    <Content Include="dropDown.png" />
+    <Content Include="EmployeeAddedConfirmation.aspx" />
+    <Content Include="HomePage.aspx" />
+    <Content Include="NavigationBar.css" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -128,6 +133,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEmployees.aspx.cs">
+      <DependentUpon>AddEmployees.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AddEmployees.aspx.designer.cs">
+      <DependentUpon>AddEmployees.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeAddedConfirmation.aspx.cs">
+      <DependentUpon>EmployeeAddedConfirmation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeAddedConfirmation.aspx.designer.cs">
+      <DependentUpon>EmployeeAddedConfirmation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

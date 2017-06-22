@@ -1,0 +1,50 @@
+﻿body {
+}
+
+* {
+    padding: 0px;
+    margins: 0px;
+}
+
+
+#menu ul
+{
+    list-style: none;
+}
+    #menu ul li {
+        background-color: cornflowerblue;
+        border: solid 1px white;
+        width: 120px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        float: left;
+        position: relative;
+        text-decoration: none;
+        color: white;
+        display: block;
+    }
+
+#menu ul li a:hover
+{
+    background-color: #ff6a00;
+    color: #fff;
+}
+
+#menu ul ul
+{
+    position: absolute;
+    display: none;
+}
+
+#menu ul li > ul li
+{
+    background-color:#18e277;
+    color: #edeef8;
+    border: solid 1px white;
+}
+
+#menu ul li:hover > ul
+{
+    display: block;
+}

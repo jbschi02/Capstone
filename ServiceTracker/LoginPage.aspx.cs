@@ -52,6 +52,7 @@ namespace ServiceTracker
             {
                 noMIDLabel.Visible = false;
                 noPasswordLabel.Visible = false;
+                Response.Redirect("HomePage.aspx");
             }
         }
 
@@ -107,6 +108,9 @@ namespace ServiceTracker
         private void createNewManager(string mID, string password)
         {
             //send to database
+
+            //redirect to AddEmployees page
+            Response.Redirect("AddEmployees.aspx");
         }
     }
 }
