@@ -11,7 +11,20 @@ namespace ServiceTracker
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string check = Context.User.Identity.Name.ToString();
+            if (string.IsNullOrWhiteSpace(check))
+            {
+                Response.Redirect("LoginPage.aspx");
+            }
+        }
 
+        protected void DropDownList3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void reloadData(object sender, EventArgs e)
+        {
         }
     }
 }

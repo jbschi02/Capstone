@@ -30,3 +30,12 @@
 .missingInfo {
     color: red;
 }
+
+.success {
+    color: #101274;
+}
+
+.title
+{
+    color: slateblue;
+}

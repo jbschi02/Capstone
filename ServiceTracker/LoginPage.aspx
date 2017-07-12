@@ -46,6 +46,7 @@
                                             &nbsp;&nbsp;
                                             <asp:Label ID="noMIDLabel" runat="server" Text="Please enter a Manager ID." CssClass ="missingInfo" Visible ="false"></asp:Label>
                                             <asp:Label ID="noPasswordLabel" runat="server" Text="Please enter a password." CssClass = "missingInfo" Visible ="false"></asp:Label>
+                                            <asp:Label ID="incorrectPasswordLabel" runat="server" Text="Incorrect username/passowrd." CssClass ="missingInfo" Visible ="false"></asp:Label>
                                         </p>
                                     </td>
                                 </tr>
@@ -61,9 +62,30 @@
                                             <asp:Label ID="RegisterLabel" runat="server" Text="Register New Manager"></asp:Label>
                                         </h3>
                                         <p>
+                                            Company:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <asp:DropDownList ID="compDropDownList" runat="server" DataSourceID="ServiceTracker" DataTextField="compname" DataValueField="compname">
+                                            </asp:DropDownList>
+                                            <asp:SqlDataSource ID="ServiceTracker" runat="server" ConnectionString="<%$ ConnectionStrings:ServiceTrackerConnectionString %>" SelectCommand="SELECT [compname] FROM [Company]"></asp:SqlDataSource>
+                                            <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
+                                        </p>
+                                        <p>
+                                            <asp:Label ID="Label1" runat="server" Text="First Name:"></asp:Label>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <asp:TextBox ID="fnameTextBox" runat="server"></asp:TextBox>
+                                            &nbsp;&nbsp;</p>
+                                        <p>
+                                            <asp:Label ID="Label2" runat="server" Text="Last Name:"></asp:Label>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+                                            <asp:TextBox ID="lnameTextBox" runat="server"></asp:TextBox>
+                                        </p>
+                                        <p>
                                             <asp:Label ID="newMIDLabel" runat="server" Text="Manager ID:"></asp:Label>
                                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
                                             <asp:TextBox ID="newMIDText" runat="server"></asp:TextBox>
+                                        </p>
+                                        <p>
+                                            Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <asp:TextBox ID="emailTextBox" runat="server"></asp:TextBox>
                                         </p>
                                         <p>
                                             <asp:Label ID="newPasswordLabel" runat="server" Text="Password:"></asp:Label>
@@ -84,6 +106,7 @@
                                             <asp:Label ID="noFirstPasswordLabel" runat="server" Text="Please enter your password." Visible = "false" CssClass =" missingInfo"></asp:Label>
                                             <asp:Label ID="noSecondPasswordLabel" runat="server" Text="Please confirm your password." Visible = "false" CssClass =" missingInfo"></asp:Label>
                                             <asp:Label ID="passwordsDifferentLabel" runat="server" Text="The two passwords entered were not the same." Visible ="false" CssClass ="missingInfo"></asp:Label>
+                                            <asp:Label ID="userExistsLabel" runat="server" Text="A manager with this ID already exists." Visible="false" CssClass ="missingInfo"></asp:Label>
                                         </p>
                                     </td>
                                 </tr>

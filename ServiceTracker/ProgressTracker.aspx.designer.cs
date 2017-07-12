@@ -10,7 +10,7 @@
 namespace ServiceTracker {
     
     
-    public partial class LoginPage {
+    public partial class ProgressTracker {
         
         /// <summary>
         /// form1 control.
@@ -22,177 +22,6 @@ namespace ServiceTracker {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// LoginTitleLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LoginTitleLabel;
-        
-        /// <summary>
-        /// loginTab control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button loginTab;
-        
-        /// <summary>
-        /// registerTab control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registerTab;
-        
-        /// <summary>
-        /// TabView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.MultiView TabView;
-        
-        /// <summary>
-        /// LoginView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View LoginView;
-        
-        /// <summary>
-        /// LoginLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LoginLabel;
-        
-        /// <summary>
-        /// MIDLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MIDLabel;
-        
-        /// <summary>
-        /// MIDText control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MIDText;
-        
-        /// <summary>
-        /// MPasswordLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MPasswordLabel;
-        
-        /// <summary>
-        /// MPasswordText control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox MPasswordText;
-        
-        /// <summary>
-        /// LoginButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button LoginButton;
-        
-        /// <summary>
-        /// noMIDLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label noMIDLabel;
-        
-        /// <summary>
-        /// noPasswordLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label noPasswordLabel;
-        
-        /// <summary>
-        /// incorrectPasswordLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label incorrectPasswordLabel;
-        
-        /// <summary>
-        /// RegisterView control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.View RegisterView;
-        
-        /// <summary>
-        /// RegisterLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RegisterLabel;
-        
-        /// <summary>
-        /// compDropDownList control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList compDropDownList;
-        
-        /// <summary>
-        /// ServiceTracker control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource ServiceTracker;
-        
-        /// <summary>
-        /// SqlDataSource1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
-        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -200,15 +29,6 @@ namespace ServiceTracker {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// fnameTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fnameTextBox;
         
         /// <summary>
         /// Label2 control.
@@ -220,138 +40,255 @@ namespace ServiceTracker {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// lnameTextBox control.
+        /// distributorDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lnameTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList distributorDropDownList;
         
         /// <summary>
-        /// newMIDLabel control.
+        /// Label3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label newMIDLabel;
+        protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// newMIDText control.
+        /// managerDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox newMIDText;
+        protected global::System.Web.UI.WebControls.DropDownList managerDropDownList;
         
         /// <summary>
-        /// emailTextBox control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox emailTextBox;
+        protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// newPasswordLabel control.
+        /// technicianDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label newPasswordLabel;
+        protected global::System.Web.UI.WebControls.DropDownList technicianDropDownList;
         
         /// <summary>
-        /// newPasswordText control.
+        /// monthLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox newPasswordText;
+        protected global::System.Web.UI.WebControls.Label monthLabel;
         
         /// <summary>
-        /// passwordReqLabel control.
+        /// monthDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label passwordReqLabel;
+        protected global::System.Web.UI.WebControls.DropDownList monthDropDownList;
         
         /// <summary>
-        /// confirmPasswordLabel control.
+        /// loadDataButon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label confirmPasswordLabel;
+        protected global::System.Web.UI.WebControls.Button loadDataButon;
         
         /// <summary>
-        /// confirmPasswordText control.
+        /// needTechLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox confirmPasswordText;
+        protected global::System.Web.UI.WebControls.Label needTechLabel;
         
         /// <summary>
-        /// RegisterButton control.
+        /// userGoalsLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RegisterButton;
+        protected global::System.Web.UI.WebControls.Label userGoalsLabel;
         
         /// <summary>
-        /// noMIDRegisterLabel control.
+        /// Label7 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label noMIDRegisterLabel;
+        protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// noFirstPasswordLabel control.
+        /// dailyGoalActualLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label noFirstPasswordLabel;
+        protected global::System.Web.UI.WebControls.Label dailyGoalActualLabel;
         
         /// <summary>
-        /// noSecondPasswordLabel control.
+        /// dailyGoalRemaingLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label noSecondPasswordLabel;
+        protected global::System.Web.UI.WebControls.Label dailyGoalRemaingLabel;
         
         /// <summary>
-        /// passwordsDifferentLabel control.
+        /// rcorners2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label passwordsDifferentLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rcorners2;
         
         /// <summary>
-        /// userExistsLabel control.
+        /// rcorners1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label userExistsLabel;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rcorners1;
+        
+        /// <summary>
+        /// dailyPercentageLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label dailyPercentageLabel;
+        
+        /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
+        
+        /// <summary>
+        /// monthlyGoalActualLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label monthlyGoalActualLabel;
+        
+        /// <summary>
+        /// monthlyGoalRemainingLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label monthlyGoalRemainingLabel;
+        
+        /// <summary>
+        /// rcorners3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rcorners3;
+        
+        /// <summary>
+        /// rcorners4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rcorners4;
+        
+        /// <summary>
+        /// percentageMonthlyLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label percentageMonthlyLabel;
+        
+        /// <summary>
+        /// Label11 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label11;
+        
+        /// <summary>
+        /// yearlyGoalActualLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label yearlyGoalActualLabel;
+        
+        /// <summary>
+        /// yearlGoalRemainingLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label yearlGoalRemainingLabel;
+        
+        /// <summary>
+        /// rcorners5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rcorners5;
+        
+        /// <summary>
+        /// rcorners6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl rcorners6;
+        
+        /// <summary>
+        /// percentageYearlyLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label percentageYearlyLabel;
     }
 }

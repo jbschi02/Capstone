@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddEmployees.aspx.cs" Inherits="ServiceTracker.AddEmployees" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ViewUsers.aspx.cs" Inherits="ServiceTracker.ViewUsers" %>
 
 <!DOCTYPE html>
 
@@ -31,31 +31,38 @@
             </ul>
             </div>
         </div>
+                <br />
         <br />
         <br />
+        <asp:Label ID="Label1" runat="server" Text="Organizations" Font-Size="XX-Large"></asp:Label>
         <br />
         <br />
-    <div>
-    
-        <asp:Label ID="fnameLabel" runat="server" Text="Employee First Name:"></asp:Label>
+        <div style="width:850px;height:150px;border:1px solid #eaeaea; background-color: #eaeaea">
+
+            &nbsp;&nbsp;
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label2" runat="server" Text="Distributor"></asp:Label>
 &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="fnameField" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="lnameLabel" runat="server" Text="Employee Last Name:"></asp:Label>
+            <asp:DropDownList ID="distributorDropDownList" runat="server">
+            </asp:DropDownList>
 &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="lnameField" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="emailLabel" runat="server" Text="Employee Email:"></asp:Label>
+            <asp:Label ID="Label3" runat="server" Text="Manager"></asp:Label>
 &nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="emailField" runat="server"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Button ID="cancelButton" runat="server" Text="Cancel" OnClick ="GoToHomePage"/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="addButton" runat="server" Text="Add Employee" OnClick ="addEmployee"/>
-    </div>
+            <asp:DropDownList ID="managerDropDownList" runat="server">
+            </asp:DropDownList>
+            <br />
+            <br />
+&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label4" runat="server" Text="Sort by"></asp:Label>
+&nbsp;&nbsp;&nbsp;
+            <asp:DropDownList ID="DropDownList3" runat="server">
+            </asp:DropDownList>
+
+        &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="Button1" runat="server" Text="Reload Data" />
+
+        </div>
     </form>
 </body>
 </html>

@@ -115,6 +115,7 @@
     <Content Include="dropDown.png" />
     <Content Include="EmployeeAddedConfirmation.aspx" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Jobs.aspx" />
     <Content Include="NavigationBar.css" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -130,6 +131,11 @@
   <ItemGroup>
     <Content Include="LoginPage.aspx" />
     <Content Include="LoginPage.css" />
+    <Content Include="progressBar.css" />
+    <Content Include="ProgressTracker.aspx" />
+    <Content Include="SetGoals.aspx" />
+    <Content Include="Table.css" />
+    <Content Include="ViewUsers.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +160,13 @@
     <Compile Include="HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Jobs.aspx.cs">
+      <DependentUpon>Jobs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Jobs.aspx.designer.cs">
+      <DependentUpon>Jobs.aspx</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.aspx.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -161,7 +174,28 @@
     <Compile Include="LoginPage.aspx.designer.cs">
       <DependentUpon>LoginPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ProgressTracker.aspx.cs">
+      <DependentUpon>ProgressTracker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProgressTracker.aspx.designer.cs">
+      <DependentUpon>ProgressTracker.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetGoals.aspx.cs">
+      <DependentUpon>SetGoals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SetGoals.aspx.designer.cs">
+      <DependentUpon>SetGoals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewUsers.aspx.cs">
+      <DependentUpon>ViewUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewUsers.aspx.designer.cs">
+      <DependentUpon>ViewUsers.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
