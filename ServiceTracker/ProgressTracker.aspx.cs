@@ -170,7 +170,14 @@ namespace ServiceTracker
                     goalLabels[j].Visible = true;
                     actualLabels[j].Visible = true;
 
-                    percentage[j] = actual[j] / goal[j];
+                    if (goal[j] == 0)
+                    {
+                        percentage[j] = 1;
+                    }
+                    else
+                    {
+                        percentage[j] = actual[j] / goal[j];
+                    }
 
                     if (percentage[j] >= 1)
                     {

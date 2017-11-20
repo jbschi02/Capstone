@@ -130,6 +130,11 @@ namespace ServiceTracker
                     oCmd.Parameters.AddWithValue("@mid", Context.User.Identity.Name);
                     oCmd.ExecuteNonQuery();
 
+                    oString = "INSERT INTO Goals VALUES(3000, 1000000, @tid, 0, 0, 90000, 90000, 90000, 90000, 90000, 90000, 90000, 90000, 90000, 90000, 90000, 90000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)";
+                    oCmd = new SqlCommand(oString, myConnection);
+                    oCmd.Parameters.AddWithValue("@tid", username);
+                    oCmd.ExecuteNonQuery();
+
                     myConnection.Close();
                     return username;
                 }

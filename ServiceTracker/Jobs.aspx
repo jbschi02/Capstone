@@ -7,6 +7,7 @@
     <title></title>
     <link href="NavigationBar.css" rel="stylesheet" />
     <link href="Table.css" rel="stylesheet" />
+    <link href="LoginPage.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -14,21 +15,31 @@
             <div id ="menu">
             <ul>
                 <li><a href="HomePage.aspx">Dashboard</a></li>
-                <li><a href="#">Users</a>
+                <li><a href="#">Technicians</a>
                     <ul>
-                        <li><a href="AddEmployees.aspx">Add Employees</a></li>
-                        <li><a href="#">Delete Employees</a></li>
+                        <li><a href="AddEmployees.aspx">Add Technician</a></li>
+                        <li><a href="ViewUsers.aspx">Statistics</a></li>
+                        <li><a href="DeleteEmployee.aspx">Delete Technician</a></li>
                     </ul>
                 </li>
-                <li><a href="ViewUsers.aspx">Organizations</a></li>
                 <li><a href="SetGoals.aspx">Goals</a>
                     <ul>
                         <li><a href="SetGoals.aspx">Set/Edit Goals</a></li>
                         <li><a href="ProgressTracker.aspx">Progress Tracker</a></li>
                     </ul>
                 </li>
-                <li><a href="Jobs.aspx">Jobs</a></li>
-                <li><a href="LoginPage.aspx">Logout</a></li>
+                <li><a href="#">Jobs</a>
+                    <ul>
+                        <li><a href="Jobs.aspx">Jobs</a></li>
+                        <li><a href="Opportunities.aspx">Opportunities</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">User</a>
+                    <ul>
+                        <li><a href="Settings.aspx">Settings</a></li>
+                        <li><a href="LoginPage.aspx">Logout</a></li>
+                    </ul>
+                </li>
             </ul>
             </div>
         </div>
@@ -86,18 +97,26 @@
         &nbsp;&nbsp;&nbsp;
             <asp:Button ID="loadDataButon" runat="server" Text="Reload Data" OnClick ="loadData"/>
 
+        &nbsp;&nbsp;&nbsp;
+            <asp:Button ID="exportDataButton" runat="server" Text="Export to Excel" OnClick ="exportDataButton_Click"/>
+        &nbsp;&nbsp;&nbsp;
+            <asp:Label ID="dateLabel" runat="server" Text="*Please enter a valid date range." CssClass ="missingInfo" Visible ="false"></asp:Label>
+
         </div>
         <br />
         <br />
         <div>
-            <asp:GridView ID="jobsGridView" runat="server" AutoGenerateColumns="False" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt">
+            <asp:GridView ID="jobsGridView" runat="server" AutoGenerateEditButton ="true" OnRowUpdated ="jobsGridView_RowUpdated" OnRowCancelingEdit ="jobsGridView_RowCancelingEdit" OnRowUpdating ="jobsGridView_RowUpdating" OnRowEditing ="jobsGridView_RowEditing" AutoGenerateColumns="False" CssClass="mGrid" PagerStyle-CssClass="pgr" AlternatingRowStyle-CssClass="alt">
+<AlternatingRowStyle CssClass="alt"></AlternatingRowStyle>
                 <Columns>
                     <asp:BoundField DataField="custname" HeaderText="Customer Name" SortExpression="custname" />
                     <asp:BoundField DataField="servicetype" HeaderText="Service Type" SortExpression="servicetype" />
-                    <asp:BoundField DataField="cost" HeaderText="Cost" SortExpression="cost" />
+                    <asp:BoundField DataField="cost" HeaderText="Revenue" SortExpression="cost" />
                     <asp:BoundField DataField="date" HeaderText="Date" SortExpression="date" />
-                    <asp:BoundField DataField="tid" HeaderText="Technician" SortExpression="tid" />
+                    <asp:BoundField DataField="tid" HeaderText="Technician" SortExpression="tid"/>
                 </Columns>
+
+<PagerStyle CssClass="pgr"></PagerStyle>
             </asp:GridView>
         </div>
     </form>

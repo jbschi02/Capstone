@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddEmployees.aspx.cs" Inherits="ServiceTracker.AddEmployees" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DeleteEmployee.aspx.cs" Inherits="ServiceTracker.DeleteEmployee" %>
 
 <!DOCTYPE html>
 
@@ -47,27 +47,27 @@
         <br />
         <br />
         <br />
-        <asp:Label ID="Label1" runat="server" Text="Add Technician" Font-Size ="XX-Large"></asp:Label>
-        <br />
-        <br />
-    <div>
-        <div style ="width:350px">
-        <asp:Label ID="fnameLabel" runat="server" Text="Employee First Name:"></asp:Label>
-        <asp:TextBox ID="fnameField" runat="server" style="float:right"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="lnameLabel" runat="server" Text="Employee Last Name:"></asp:Label>
-        <asp:TextBox ID="lnameField" runat="server" style="float:right"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="emailLabel" runat="server" Text="Employee Email:"></asp:Label>
-        <asp:TextBox ID="emailField" runat="server" style="float:right"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Button ID="cancelButton" runat="server" Text="Cancel" OnClick ="GoToHomePage"/>
-        <asp:Button ID="addButton" runat="server" Text="Add Employee" OnClick ="addEmployee" style="float:right"/>
+        <div>
+            <asp:Label ID="Label1" runat="server" Text="Delete Technician" Font-Size ="XX-Large"></asp:Label>
+            <asp:GridView ID="deleteGridView" runat="server" CssClass ="mGrid">
+                <Columns>
+                    <asp:TemplateField HeaderText="Delete">
+                        <ItemTemplate>
+                            <asp:CheckBox ID="chkSelect" runat="server" />
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                </Columns>
+            </asp:GridView>
+            <asp:Button ID="deleteButton" runat="server" Text="Delete" OnClick ="deleteButton_Click"/>
+            <asp:Button ID="cancelButton" runat="server" Text="Cancel" Visible ="false" OnClick ="cancelButton_Click"/>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Button ID="confirmButton" runat="server" Text="Confirm" Visible ="false" OnClick ="confirmButton_Click"/>
+        &nbsp;&nbsp;&nbsp;
+            <asp:Label ID="pickOneLabel" runat="server" Text="*Please choose at least one employee to delete" Visible ="false" CssClass ="missingInfo"></asp:Label>
         </div>
-    </div>
+        <br />
+        <br />
+        <asp:Label ID="successfulDeleteLabel" runat="server" Text="Technician successfully deleted!" Visible ="false"></asp:Label>
     </form>
 </body>
 </html>

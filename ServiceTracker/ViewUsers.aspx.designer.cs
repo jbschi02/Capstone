@@ -40,13 +40,13 @@ namespace ServiceTracker {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// distributorDropDownList control.
+        /// startDateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList distributorDropDownList;
+        protected global::System.Web.UI.WebControls.TextBox startDateTextBox;
         
         /// <summary>
         /// Label3 control.
@@ -58,13 +58,31 @@ namespace ServiceTracker {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// managerDropDownList control.
+        /// endDateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList managerDropDownList;
+        protected global::System.Web.UI.WebControls.TextBox endDateTextBox;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// invalidDateLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label invalidDateLabel;
         
         /// <summary>
         /// Label4 control.
@@ -76,21 +94,30 @@ namespace ServiceTracker {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// DropDownList3 control.
+        /// techGridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList3;
+        protected global::System.Web.UI.WebControls.GridView techGridView1;
         
         /// <summary>
-        /// Button1 control.
+        /// Label5 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Label Label5;
+        
+        /// <summary>
+        /// jobGridView control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView jobGridView;
     }
 }

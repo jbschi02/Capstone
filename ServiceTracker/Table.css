@@ -33,3 +33,4 @@
  }   
 .mGrid .pgr a { color: #666; text-decoration: none; }
 .mGrid .pgr a:hover { color: #000; text-decoration: none; }
+typeLabel {display:block; width:x; height:y; text-align:right;}

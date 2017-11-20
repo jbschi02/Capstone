@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddEmployees.aspx.cs" Inherits="ServiceTracker.AddEmployees" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Settings.aspx.cs" Inherits="ServiceTracker.Settings" %>
 
 <!DOCTYPE html>
 
@@ -47,27 +47,11 @@
         <br />
         <br />
         <br />
-        <asp:Label ID="Label1" runat="server" Text="Add Technician" Font-Size ="XX-Large"></asp:Label>
-        <br />
-        <br />
-    <div>
-        <div style ="width:350px">
-        <asp:Label ID="fnameLabel" runat="server" Text="Employee First Name:"></asp:Label>
-        <asp:TextBox ID="fnameField" runat="server" style="float:right"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="lnameLabel" runat="server" Text="Employee Last Name:"></asp:Label>
-        <asp:TextBox ID="lnameField" runat="server" style="float:right"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Label ID="emailLabel" runat="server" Text="Employee Email:"></asp:Label>
-        <asp:TextBox ID="emailField" runat="server" style="float:right"></asp:TextBox>
-        <br />
-        <br />
-        <asp:Button ID="cancelButton" runat="server" Text="Cancel" OnClick ="GoToHomePage"/>
-        <asp:Button ID="addButton" runat="server" Text="Add Employee" OnClick ="addEmployee" style="float:right"/>
+        <div>
+            <asp:Label ID="Label4" runat="server" Text="Settings" Font-Size ="XX-Large"></asp:Label>
+            <br />
+            <br />
         </div>
-    </div>
     </form>
 </body>
 </html>

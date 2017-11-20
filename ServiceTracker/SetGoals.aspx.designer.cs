@@ -103,6 +103,15 @@ namespace ServiceTracker {
         protected global::System.Web.UI.WebControls.Label needTechLabel;
         
         /// <summary>
+        /// userGoalsLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label userGoalsLabel;
+        
+        /// <summary>
         /// janLabel control.
         /// </summary>
         /// <remarks>

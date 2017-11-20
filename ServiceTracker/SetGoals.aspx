@@ -15,21 +15,31 @@
             <div id ="menu">
             <ul>
                 <li><a href="HomePage.aspx">Dashboard</a></li>
-                <li><a href="#">Users</a>
+                <li><a href="#">Technicians</a>
                     <ul>
-                        <li><a href="AddEmployees.aspx">Add Employees</a></li>
-                        <li><a href="#">Delete Employees</a></li>
+                        <li><a href="AddEmployees.aspx">Add Technician</a></li>
+                        <li><a href="ViewUsers.aspx">Statistics</a></li>
+                        <li><a href="DeleteEmployee.aspx">Delete Technician</a></li>
                     </ul>
                 </li>
-                <li><a href="ViewUsers.aspx">Organizations</a></li>
                 <li><a href="SetGoals.aspx">Goals</a>
                     <ul>
                         <li><a href="SetGoals.aspx">Set/Edit Goals</a></li>
                         <li><a href="ProgressTracker.aspx">Progress Tracker</a></li>
                     </ul>
                 </li>
-                <li><a href="Jobs.aspx">Jobs</a></li>
-                <li><a href="LoginPage.aspx">Logout</a></li>
+                <li><a href="#">Jobs</a>
+                    <ul>
+                        <li><a href="Jobs.aspx">Jobs</a></li>
+                        <li><a href="Opportunities.aspx">Opportunities</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">User</a>
+                    <ul>
+                        <li><a href="Settings.aspx">Settings</a></li>
+                        <li><a href="LoginPage.aspx">Logout</a></li>
+                    </ul>
+                </li>
             </ul>
             </div>
         </div>
@@ -76,71 +86,75 @@
         </div>
         <br />
         <br />
-        <div>
+        <br />
+        <asp:Label ID="userGoalsLabel" runat="server" Text="userGoals" Font-Size ="X-Large" Visible ="false" CssClass ="title"></asp:Label>
+        <br />
+        <br />
+        <div style="width:280px;height:850px;">
             <asp:Label ID="janLabel" runat="server" Text="January" Visible ="false"></asp:Label> 
             <asp:Label ID="successLabel" runat="server" Text="Goals successfully updated!" Visible ="false" CssClass ="success"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="janGoalsTextBox" runat="server" Textmode ="Number" Visible ="false"></asp:TextBox>
+            <asp:TextBox ID="janGoalsTextBox" runat="server" Textmode ="Number" Visible ="false" style ="float:right"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="febLabel" runat="server" Text="February" Visible ="false"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="febGoalsTextBox" runat="server" TextMode="Number" Visible ="false"></asp:TextBox>
+            <asp:TextBox ID="febGoalsTextBox" runat="server" TextMode="Number" Visible ="false" style ="float:right"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="marLabel" runat="server" Text="March" Visible ="false"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="marGoalsTextBox" runat="server" TextMode ="Number" Visible ="false"></asp:TextBox>
+            <asp:TextBox ID="marGoalsTextBox" runat="server" TextMode ="Number" Visible ="false" style ="float:right"></asp:TextBox>
             <br />
             <br />
                         <asp:Label ID="Label4" runat="server" Text="April" Visible ="false"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox1" runat="server" TextMode="Number" Visible ="false"></asp:TextBox>
+            <asp:TextBox ID="TextBox1" runat="server" TextMode="Number" Visible ="false" style ="float:right"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="Label6" runat="server" Text="May" Visible ="false"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox2" runat="server" TextMode ="Number" Visible ="false"></asp:TextBox>
+            <asp:TextBox ID="TextBox2" runat="server" TextMode ="Number" Visible ="false" style ="float:right"></asp:TextBox>
             <br />
             <br />
                         <asp:Label ID="Label7" runat="server" Text="June" Visible ="false"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox3" runat="server" TextMode="Number" Visible ="false"></asp:TextBox>
+            <asp:TextBox ID="TextBox3" runat="server" TextMode="Number" Visible ="false" style ="float:right"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="Label8" runat="server" Text="July" Visible ="false"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox4" runat="server" TextMode ="Number" Visible ="false"></asp:TextBox>
+            <asp:TextBox ID="TextBox4" runat="server" TextMode ="Number" Visible ="false" style ="float:right"></asp:TextBox>
             <br />
             <br />
                         <asp:Label ID="Label9" runat="server" Text="August" Visible ="false"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox5" runat="server" TextMode="Number" Visible ="false"></asp:TextBox>
+            <asp:TextBox ID="TextBox5" runat="server" TextMode="Number" Visible ="false" style ="float:right"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="Label10" runat="server" Text="September" Visible ="false"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox6" runat="server" TextMode ="Number" Visible ="false"></asp:TextBox>
+            <asp:TextBox ID="TextBox6" runat="server" TextMode ="Number" Visible ="false" style ="float:right"></asp:TextBox>
             <br />
             <br />
                         <asp:Label ID="Label11" runat="server" Text="October" Visible ="false"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox7" runat="server" TextMode="Number" Visible ="false"></asp:TextBox>
+            <asp:TextBox ID="TextBox7" runat="server" TextMode="Number" Visible ="false" style ="float:right"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="Label12" runat="server" Text="November" Visible ="false"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox8" runat="server" TextMode ="Number" Visible ="false"></asp:TextBox>
+            <asp:TextBox ID="TextBox8" runat="server" TextMode ="Number" Visible ="false" style ="float:right"></asp:TextBox>
             <br />
             <br />
                         <asp:Label ID="Label13" runat="server" Text="December" Visible ="false"></asp:Label>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="TextBox9" runat="server" TextMode ="Number" Visible ="false"></asp:TextBox>
+            <asp:TextBox ID="TextBox9" runat="server" TextMode ="Number" Visible ="false" style ="float:right"></asp:TextBox>
             <br />
             <br />
             <asp:Button ID="cancelButton" runat="server" Text="Cancel" Visible ="false" OnClick ="cancelEditing"/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="saveButton" runat="server" Text="Save" Visible ="false" OnClick="saveButton_Click"/>
+            <asp:Button ID="saveButton" runat="server" Text="Save" Visible ="false" OnClick="saveButton_Click" style ="float:right"/>
         </div>
     </form>
 </body>

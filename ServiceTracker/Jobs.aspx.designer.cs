@@ -166,6 +166,24 @@ namespace ServiceTracker {
         protected global::System.Web.UI.WebControls.Button loadDataButon;
         
         /// <summary>
+        /// exportDataButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button exportDataButton;
+        
+        /// <summary>
+        /// dateLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label dateLabel;
+        
+        /// <summary>
         /// jobsGridView control.
         /// </summary>
         /// <remarks>

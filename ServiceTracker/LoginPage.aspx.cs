@@ -109,12 +109,13 @@ namespace ServiceTracker
             string userName = MIDText.Text;
             string dbPwd = "";
             string userPwd = MPasswordText.Text;
+            bool isManager = false;
 
             var con = ConfigurationManager.ConnectionStrings["ServiceTracker"].ToString();
 
             using (SqlConnection myConnection = new SqlConnection(con))
             {
-                string oString = "SELECT PasswordHash, Salt FROM Users WHERE Username = @uname";
+                string oString = "SELECT PasswordHash, Salt, Manager FROM Users WHERE Username = @uname";
                 SqlCommand oCmd = new SqlCommand(oString, myConnection);
                 oCmd.Parameters.AddWithValue("@uname", userName);
                 myConnection.Open();
@@ -124,6 +125,7 @@ namespace ServiceTracker
                     {
                         dbPwd = oReader[0].ToString();
                         salt = oReader[1].ToString();
+                        isManager = oReader.GetBoolean(2);
                     }
                 }
                 myConnection.Close();
@@ -132,14 +134,13 @@ namespace ServiceTracker
             string temp = salt + userPwd;
             string hash = sha256(temp);
 
-            if (hash.Equals(dbPwd))
+            if (hash.Equals(dbPwd) && isManager)
             {
                 FormsAuthentication.SetAuthCookie(userName, true);
                 Response.Redirect("HomePage.aspx?Username=" + MIDText.Text);
             }
             else
             {
-
                 incorrectPasswordLabel.Visible = true;
             }
         }

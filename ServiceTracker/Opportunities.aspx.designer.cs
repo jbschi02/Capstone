@@ -10,7 +10,7 @@
 namespace ServiceTracker {
     
     
-    public partial class AddEmployees {
+    public partial class Opportunities {
         
         /// <summary>
         /// form1 control.
@@ -31,75 +31,39 @@ namespace ServiceTracker {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// fnameLabel control.
+        /// endDateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label fnameLabel;
+        protected global::System.Web.UI.WebControls.TextBox endDateTextBox;
         
         /// <summary>
-        /// fnameField control.
+        /// startDateTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox fnameField;
+        protected global::System.Web.UI.WebControls.TextBox startDateTextBox;
         
         /// <summary>
-        /// lnameLabel control.
+        /// oppsGridView control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lnameLabel;
+        protected global::System.Web.UI.WebControls.GridView oppsGridView;
         
         /// <summary>
-        /// lnameField control.
+        /// oppsDataSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox lnameField;
-        
-        /// <summary>
-        /// emailLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label emailLabel;
-        
-        /// <summary>
-        /// emailField control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox emailField;
-        
-        /// <summary>
-        /// cancelButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cancelButton;
-        
-        /// <summary>
-        /// addButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button addButton;
+        protected global::System.Web.UI.WebControls.SqlDataSource oppsDataSource;
     }
 }

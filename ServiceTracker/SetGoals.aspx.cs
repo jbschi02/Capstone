@@ -24,16 +24,42 @@ namespace ServiceTracker
                 var myConn = ConfigurationManager.ConnectionStrings["ServiceTracker"].ToString();
                 using (System.Data.SqlClient.SqlConnection myConnection = new SqlConnection(myConn))
                 {
-                    SqlCommand myCmd = new SqlCommand("SELECT compname FROM Company", myConnection);
+                    SqlCommand myCmd = new SqlCommand("SELECT compid FROM Manager WHERE username = @mid", myConnection);
+                    myCmd.Parameters.AddWithValue("@mid", Context.User.Identity.Name.ToString());
                     myConnection.Open();
                     SqlDataReader myReader = myCmd.ExecuteReader();
 
                     //Set up the data binding.
                     distributorDropDownList.DataSource = myReader;
-                    distributorDropDownList.DataTextField = "compname";
-                    distributorDropDownList.DataValueField = "compname";
+                    distributorDropDownList.DataTextField = "compid";
+                    distributorDropDownList.DataValueField = "compid";
                     distributorDropDownList.DataBind();
                     myReader.Close();
+                    myConnection.Close();
+
+                    myCmd = new SqlCommand("SELECT fname + ' ' + lname AS fullname FROM Manager WHERE username = @mid", myConnection);
+                    myCmd.Parameters.AddWithValue("@mid", Context.User.Identity.Name.ToString());
+                    myConnection.Open();
+                    myReader = myCmd.ExecuteReader();
+
+                    managerDropDownList.DataSource = myReader;
+                    managerDropDownList.DataTextField = "fullname";
+                    managerDropDownList.DataValueField = "fullname";
+                    managerDropDownList.DataBind();
+                    myReader.Close();
+                    myConnection.Close();
+
+                    myCmd = new SqlCommand("SELECT username,  fname + ' ' + lname AS fullname FROM Technician WHERE mid = @mid", myConnection);
+                    myCmd.Parameters.AddWithValue("@mid", Context.User.Identity.Name.ToString());
+                    myConnection.Open();
+                    myReader = myCmd.ExecuteReader();
+
+                    technicianDropDownList.DataSource = myReader;
+                    technicianDropDownList.DataTextField = "fullname";
+                    technicianDropDownList.DataValueField = "username";
+                    technicianDropDownList.DataBind();
+                    myReader.Close();
+
 
                     myCmd = new SqlCommand("SELECT type FROM JobTypes", myConnection);
                     myReader = myCmd.ExecuteReader();
@@ -41,9 +67,9 @@ namespace ServiceTracker
                     myReader.Close();
                 }
 
-                technicianDropDownList.Items.Insert(0, "All");
-                managerDropDownList.Items.Insert(0, "All");
-                distributorDropDownList.Items.Insert(0, "All");
+                //technicianDropDownList.Items.Insert(0, "All");
+                //managerDropDownList.Items.Insert(0, "All");
+                //distributorDropDownList.Items.Insert(0, "All");
             }
         }
 
@@ -123,12 +149,15 @@ namespace ServiceTracker
         protected void loadData(object sender, EventArgs e)
         {
             successLabel.Visible = false;
+            userGoalsLabel.Visible = false;
             if (technicianDropDownList.SelectedValue.ToString().Equals("All"))
             {
                 needTechLabel.Visible = true;
             }
             else
             {
+                userGoalsLabel.Text = "Editing Goals for " + technicianDropDownList.SelectedItem.ToString();
+                userGoalsLabel.Visible = true;
                 needTechLabel.Visible = false;
 
                 double[] doubleMonths = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
@@ -205,6 +234,7 @@ namespace ServiceTracker
 
                 reverse(false);
                 successLabel.Visible = true;
+                userGoalsLabel.Visible = false;
             }
         }
 
